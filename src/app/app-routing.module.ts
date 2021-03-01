@@ -14,6 +14,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./Module/main/main.module').then((m) => m.MainModule),
   },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./Module/notfound/notfound.module').then((m) => m.NotfoundModule),
+  },
 ];
 
 @NgModule({
